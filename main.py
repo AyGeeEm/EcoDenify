@@ -3,6 +3,9 @@ import requests
 api_key = '890d59fb54fe5c2415fb83a495bf833026b3336c52539227302503861a215595'  # Replace with your actual API key
 query = 'OpenAI'
 
+#let me know if you see this
+
+
 # Define the search engine (e.g., Google)
 search_engine = 'google'
 
