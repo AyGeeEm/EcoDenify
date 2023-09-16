@@ -3,6 +3,9 @@ import requests
 api_key = '890d59fb54fe5c2415fb83a495bf833026b3336c52539227302503861a215595'  # Replace with your actual API key
 query = 'OpenAI'
 
+
+#serialNum = int(input("Please Input the serial Number"))
+modelNum = input("please input the model Number")
 #let me know if you see this
 
 
@@ -10,7 +13,7 @@ query = 'OpenAI'
 search_engine = 'google'
 
 # Construct the URL for the API request
-url = f'https://serpapi.com/search.json?q={query}&engine={search_engine}&api_key={api_key}'
+url = f'https://serpapi.com/search.json?q={modelNum}&engine={search_engine}&api_key={api_key}'
 
 # Make the API request
 response = requests.get(url)
