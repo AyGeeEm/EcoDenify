@@ -6,6 +6,29 @@ query = 'OpenAI'
 # Define the search engine (e.g., Google)
 search_engine = 'google'
 
+def get_user_city():
+    try:
+        # Send a request to ipinfo.io to get geolocation information based on the user's IP address
+        response = requests.get('https://ipinfo.io')
+
+        # Parse the JSON response
+        data = response.json()
+
+        # Extract the city from the response
+        city = data.get('city', 'Unknown')
+
+        return city
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        return 'Unknown'
+
+
+# JUST USE THIS FOR TESTING THE LOCATION OF USER
+if __name__ == '__main__':
+    user_city = get_user_city()
+    print(f"Your approximate city is: {user_city}")
+
+
 def getModelSearches():
 
     modelNum = input("please input the model Number\n")
